@@ -1,0 +1,1 @@
+{"appName":"jenkins","userGivenName":"jenkins","destNamespace":"default","destServer":"https://kubernetes.default.svc","srcPath":"tree/main//jenkins-operator","srcRepoURL":"https://github.com/levmichael3/argo_camp.git","srcTargetRevision":"","labels":null,"exclude":"","include":""}
