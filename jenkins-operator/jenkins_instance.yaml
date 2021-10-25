@@ -1,7 +1,7 @@
 apiVersion: jenkins.io/v1alpha2
 kind: Jenkins
 metadata:
-  name: jenkins-test
+  name: jenkins-dev
   namespace: dev
 spec:
   configurationAsCode:
@@ -17,7 +17,7 @@ spec:
   service:
     labels:
       app: jenkins-operator
-      jenkins-cr: jenkins
+      jenkins-cr: jenkins-dev
     type: NodePort
     port: 8080
     # nodePort: 8080

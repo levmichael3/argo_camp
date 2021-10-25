@@ -19,7 +19,7 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: jenkins-operator-http-jenkins-test-dev
+              serviceName: jenkins-operator-http-jenkins-dev
               servicePort: 8080
             path: '/'
             pathType: Prefix
