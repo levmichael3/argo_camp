@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
   - ./jenkins.io_jenkins.yaml
   - ./all-in-one-v1alpha2.yaml
+  - ./jenkins_instance.yaml
+  - ./jenkins_ingress.yaml
