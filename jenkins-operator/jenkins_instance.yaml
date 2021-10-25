@@ -17,7 +17,7 @@ spec:
   service:
     labels:
       app: jenkins-operator
-      jenkins-cr: jenkins-dev
+      jenkins-cr: jenkins
     type: NodePort
     port: 8080
     # nodePort: 8080
@@ -27,14 +27,22 @@ spec:
     disableCSRFProtection: false
     plugins:
     - name: simple-theme-plugin
+      version: "0.6"
     basePlugins:
     - name: kubernetes
+      version: "1.30.0"
     - name: workflow-job
+      version: "2.41"
     - name: workflow-aggregator
+      version: "2.6"
     - name: git
+      version: "4.7.2"
     - name: job-dsl
+      version: "1.77"
     - name: configuration-as-code
+      version: "1.51"
     - name: kubernetes-credentials-provider
+      version: "0.18-1"
     containers:
       - name: jenkins-master
         image: jenkins/jenkins:2.277.4-lts-alpine
