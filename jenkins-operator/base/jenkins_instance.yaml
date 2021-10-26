@@ -4,20 +4,20 @@ metadata:
   name: jenkins
 spec:
   configurationAsCode:
-    configurations: []
+    configurations:
+      - name: jenkins-operator-user-configuration
     secret:
       name: ""
   groovyScripts:
-    configurations: []
-    secret:
+    configurations:
+      - name: jenkins-operator-user-configuration
       name: ""
   jenkinsAPISettings:
     authorizationStrategy: createUser
   service:
     labels:
       app: jenkins-operator
-      # TODO
-      jenkins-cr: jenkins ###
+      jenkins-cr: jenkins # DYNAMIC
     type: NodePort
     port: 8080
   master:
