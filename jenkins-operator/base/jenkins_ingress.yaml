@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: jenkins-ing-dev
+  name: jenkins-ing
   namespace: dev
   annotations:
     alb.ingress.kubernetes.io/backend-protocol: HTTP
@@ -15,11 +15,11 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   rules:
-    - host: jenkins-dev.blackowl.click
+    - host: jenkins.blackowl.click
       http:
         paths:
           - backend:
-              serviceName: jenkins-operator-http-jenkins-dev
+              serviceName: jenkins-operator-http-jenkins-test
               servicePort: 8080
             path: '/'
             pathType: Prefix
