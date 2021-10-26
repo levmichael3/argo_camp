@@ -13,13 +13,3 @@ metadata:
     kubernetes.io/ingress.class: alb
     # alb.ingress.kubernetes.io/group.name: jenkins
     alb.ingress.kubernetes.io/scheme: internet-facing
-spec:
-  rules:
-    - host: jenkins.blackowl.click
-      http:
-        paths:
-          - backend:
-              serviceName: jenkins-operator-http-jenkins-test
-              servicePort: 8080
-            path: '/'
-            pathType: Prefix

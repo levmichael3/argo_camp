@@ -5,3 +5,7 @@ resources:
 - ../../base
 namePrefix: dev-
 namespace: dev
+patches:
+- path: jenkins_ingress.yaml
+  target:
+    kind: Ingress

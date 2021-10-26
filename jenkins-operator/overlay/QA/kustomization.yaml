@@ -5,3 +5,7 @@ resources:
 - ../../base
 namePrefix: qa-
 namespace: qa
+patches:
+- path: jenkins_ingress.yaml
+  target:
+    kind: Ingress
