@@ -1,8 +1,8 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: jenkins-ing
-  namespace: dev
+  # namespace: dev
   annotations:
     alb.ingress.kubernetes.io/backend-protocol: HTTP
     # alb.ingress.kubernetes.io/target-type: ip
@@ -13,3 +13,15 @@ metadata:
     kubernetes.io/ingress.class: alb
     # alb.ingress.kubernetes.io/group.name: jenkins
     alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  rules:
+  - host: jenkins-dev.blackowl.click # DYNAMIC
+    http:
+      paths:
+      - backend:
+          service:
+            name: jenkins-operator-http-dev-jenkins # DYNAMIC
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix

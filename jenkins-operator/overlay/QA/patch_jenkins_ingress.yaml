@@ -1,3 +1,6 @@
-- op: add
-  path: /spec/rules/0/http/paths/0/backend/serviceName
-  value: jenkins-operator-http-qa-jenkins
+- op: replace
+  path: /spec/rules/0/http/paths/0/backend/service/name
+  value: jenkins-operator-http-dev-jenkins
+- op: replace
+  path: /spec/rules/0/host
+  value: jenkins-dev.blackowl.click

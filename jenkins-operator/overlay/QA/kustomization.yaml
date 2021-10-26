@@ -6,10 +6,6 @@ resources:
 - ../../base
 namePrefix: qa-
 namespace: qa
-patches:
-- path: jenkins_ingress.yaml
-  target:
-    kind: Ingress
 patchesJson6902:
 - target:
     group: jenkins.io
@@ -19,7 +15,7 @@ patchesJson6902:
   path: patch_jenkins_instance.yaml
 - target:
     group: networking.k8s.io
-    version: v1beta1
+    version: v1
     kind: Ingress
     name: jenkins-ing
   path: patch_jenkins_ingress.yaml
