@@ -1,3 +1,12 @@
 - op: replace
   path: /spec/service/labels/jenkins-cr
   value: dev-jenkins
+- op: replace
+  path: /spec/service/labels/jenkins-cr
+  value: dev-jenkins
+- op: replace
+  path: /spec/configurationAsCode/configurations/0/name
+  value: dev-jenkins-operator-user-configuration
+- op: replace
+  path: /spec/groovyScripts/configurations/0/name
+  value: dev-jenkins-operator-user-configuration

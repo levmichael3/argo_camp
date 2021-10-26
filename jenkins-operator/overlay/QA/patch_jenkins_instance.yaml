@@ -1,3 +1,9 @@
 - op: replace
   path: /spec/service/labels/jenkins-cr
   value: qa-jenkins
+- op: replace
+  path: /spec/configurationAsCode/configurations/0/name
+  value: qa-jenkins-operator-user-configuration
+- op: replace
+  path: /spec/groovyScripts/configurations/0/name
+  value: qa-jenkins-operator-user-configuration

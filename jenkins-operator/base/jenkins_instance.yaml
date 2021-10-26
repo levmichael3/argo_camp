@@ -5,10 +5,10 @@ metadata:
 spec:
   configurationAsCode:
     configurations:
-    - name: jenkins-operator-user-configuration
+    - name: jenkins-operator-user-configuration # DYNAMIC
   groovyScripts:
     configurations:
-    - name: jenkins-operator-user-configuration
+    - name: jenkins-operator-user-configuration # DYNAMIC
   jenkinsAPISettings:
     authorizationStrategy: createUser
   service:
