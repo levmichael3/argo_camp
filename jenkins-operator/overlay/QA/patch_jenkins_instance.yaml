@@ -1,0 +1,3 @@
+- op: replace
+  path: /spec/service/labels/jenkins-cr
+  value: qa-jenkins

@@ -9,3 +9,10 @@ patches:
 - path: jenkins_ingress.yaml
   target:
     kind: Ingress
+patchesJson6902:
+- target:
+    group: jenkins.io
+    version: v1alpha2
+    kind: Jenkins
+    name: jenkins
+  path: patch_jenkins_instance.yaml
