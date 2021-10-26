@@ -16,3 +16,9 @@ patchesJson6902:
     kind: Jenkins
     name: jenkins
   path: patch_jenkins_instance.yaml
+- target:
+    group: networking.k8s.io
+    version: v1beta1
+    kind: Ingress
+    name: jenkins-ing
+  path: patch_jenkins_ingress.yaml

@@ -8,7 +8,6 @@ spec:
        http:
         paths:
           - backend:
-              serviceName: jenkins-operator-http-jenkins
               servicePort: 8080
             path: '/'
             pathType: Prefix
