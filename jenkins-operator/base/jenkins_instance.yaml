@@ -6,9 +6,13 @@ spec:
   configurationAsCode:
     configurations:
     - name: jenkins-operator-user-configuration # DYNAMIC
+    secret:
+      name: ""
   groovyScripts:
     configurations:
     - name: jenkins-operator-user-configuration # DYNAMIC
+    secret:
+      name: ""
   jenkinsAPISettings:
     authorizationStrategy: createUser
   service:
