@@ -5,13 +5,10 @@ metadata:
 spec:
   configurationAsCode:
     configurations:
-      - name: jenkins-operator-user-configuration
-    secret:
-      name: ""
+    - name: jenkins-operator-user-configuration
   groovyScripts:
     configurations:
-      - name: jenkins-operator-user-configuration
-      name: ""
+    - name: jenkins-operator-user-configuration
   jenkinsAPISettings:
     authorizationStrategy: createUser
   service:
