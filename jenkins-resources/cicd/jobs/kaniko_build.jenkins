@@ -22,10 +22,10 @@ pipelineJob('kanikio_build') {
                         url('https://github.com/levmichael3/argo_camp.git')
                         credentials('jenkins-operator')
                     }
-                    branches('*/master')
+                    branches('*/main')
                 }
             }
-            scriptPath('jenkins-operator/cicd/pipelines/kaniko-build.jenkins')
+            scriptPath('jenkins-operator/cicd/pipelines/kaniko_build.jenkins')
         }
     }
 }
