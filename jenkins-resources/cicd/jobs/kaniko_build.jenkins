@@ -25,7 +25,7 @@ pipelineJob('kanikio_build') {
                     branches('*/main')
                 }
             }
-            scriptPath('jenkins-operator/cicd/pipelines/kaniko_build.jenkins')
+            scriptPath('jenkins-resources/cicd/pipelines/kaniko_build.jenkins')
         }
     }
 }
