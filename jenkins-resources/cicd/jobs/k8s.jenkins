@@ -19,13 +19,13 @@ pipelineJob('k8s-e2e') {
             scm {
                 git {
                     remote {
-                        url('https://github.com/jenkinsci/kubernetes-operator.git')
+                        url('https://github.com/levmichael3/argo_camp.git')
                         credentials('jenkins-operator')
                     }
-                    branches('*/master')
+                    branches('*/main')
                 }
             }
-            scriptPath('cicd/pipelines/k8s.jenkins')
+            scriptPath('jenkins-resources/cicd/pipelines/k8s.jenkins')
         }
     }
 }

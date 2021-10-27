@@ -16,7 +16,7 @@ pipelineJob('kanikio_build') {
 
     definition {
         cpsScm {
-            scm {jenkins-resources
+            scm {
                 git {
                     remote {
                         url('https://github.com/levmichael3/argo_camp.git')
