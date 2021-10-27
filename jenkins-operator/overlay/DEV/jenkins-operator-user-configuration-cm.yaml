@@ -18,7 +18,7 @@ data:
 
     List<ThemeElement> configElements = new ArrayList<>();
     configElements.add(new CssTextThemeElement("DEFAULT"));
-    configElements.add(new CssUrlThemeElement("https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-blue-green.css"));
+    configElements.add(new CssUrlThemeElement("https://cdn.rawgit.com/afonsof/jenkins-material-theme/gh-pages/dist/material-blue.css"));
     decorator.setElements(configElements);
     decorator.save();
 
