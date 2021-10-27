@@ -76,5 +76,5 @@ spec:
     - id: jenkins-operator
       targets: "jenkins-resources/cicd/jobs/*.jenkins"
       description: "Jenkins Operator repository"
-      repositoryBranch: master
+      repositoryBranch: main
       repositoryUrl: https://github.com/levmichael3/argo_camp.git
