@@ -74,7 +74,7 @@ spec:
             memory: 500Mi
   seedJobs:
     - id: jenkins-operator
-      targets: "cicd/jobs/*.jenkins"
+      targets: "jenkins-operator/cicd/jobs/*.jenkins"
       description: "Jenkins Operator repository"
       repositoryBranch: master
-      repositoryUrl: https://github.com/jenkinsci/kubernetes-operator.git
+      repositoryUrl: https://github.com/levmichael3/argo_camp.git

@@ -1,0 +1,31 @@
+#!/usr/bin/env groovy
+
+pipelineJob('kanikio-build') {
+    displayName('Kubernetes access to ECR Test')
+
+    logRotator {
+        numToKeep(10)
+        daysToKeep(30)
+    }
+
+    configure { project ->
+        project / 'properties' / 'org.jenkinsci.plugins.workflow.job.properties.DurabilityHintJobProperty' {
+            hint('PERFORMANCE_OPTIMIZED')
+        }
+    }
+
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/levmichael3/argo_camp.git')
+                        credentials('jenkins-operator')
+                    }
+                    branches('*/master')
+                }
+            }
+            scriptPath('jenkins-operator/cicd/pipelines/kaniko-build.jenkins')
+        }
+    }
+}
