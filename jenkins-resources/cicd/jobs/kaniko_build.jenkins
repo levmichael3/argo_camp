@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-pipelineJob('kanikio-build') {
+pipelineJob('kanikio_build') {
     displayName('Kubernetes access to ECR Test')
 
     logRotator {
